@@ -1,17 +1,17 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import Register from "../pages/Register";
+import Login from "../pages/Login";
 
 const routers = () => {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
-          {/* <Route path="blogs" element={<Blogs />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="*" element={<NoPage />} /> */}
+          <Route path="/login" element={<Login />} />
+          {/* <Route path="/appointments" element={<Appointments />} /> */}
         </Routes>
       </BrowserRouter>
     </>

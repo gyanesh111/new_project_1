@@ -3,12 +3,12 @@ import { Schema, model } from mongoose;
 const userSchema = new Schema({
   username:{
     type: String,
-    required: true,
+    required: [true, 'username required']
 
   },
   email:{
     type: String,
-    required: true,
+    required: [true, `email required`] 
   },
   password:{
     type:String,

@@ -1,9 +1,31 @@
-import React from "react";
+import { Link } from "react-router-dom";
+import { Form } from "antd";
+import "./css/Register.css";
 
 const Login = () => {
+  const onFinishHandler = (values) => {
+    console.log(values);
+  };
   return (
-    <div>
-      <h1>Login</h1>
+    <div className="form-container">
+      <Form
+        layout="vertical"
+        onFinish={onFinishHandler}
+        className="register-form"
+      >
+        <h1 className="text-center">Login Form</h1>
+        <Form.Item className="item" label="email" name="email">
+          <input type="text" required />
+        </Form.Item>
+        <Form.Item className="item" label="password" name="password">
+          <input type="text" required />
+        </Form.Item>
+
+        <Link to="/register" className="mr-2 pr-3 text-black">
+          Not A User ? Register
+        </Link>
+        <button> Login </button>
+      </Form>
     </div>
   );
 };
